@@ -1,0 +1,212 @@
+/* Basic sample */
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'KCC-Hanbit';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Cafe24Ssurround';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#co{
+	padding-top:510px;
+}
+
+.input-field {
+	font-family: 'KCC-Hanbit';
+    width: 80%;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn{
+	position: relative;
+	top: 80px;	
+	text-align: center;
+	z-index: 3;
+}
+
+label {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;;
+  }
+
+[type="checkbox"] {
+	appearance: none;
+	position: relative;
+	border: max(2px, 0.1em) solid gray;
+	border-radius: 1.25em;
+	width: 2.25em;
+	height: 1.25em;
+	cursor: pointer
+  }
+
+[type="checkbox"]::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	transform: scale(0.8);
+	background-color: gray;
+	transition: left 250ms linear;
+  }
+
+[type="checkbox"]:checked::before {
+	background-color: white;
+	left: 1em;
+  }
+  
+[type="checkbox"]:checked {
+	background-color: tomato;
+	border-color: tomato;
+  }
+
+.header {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	background-color: #fff;
+	flex-shrink: 0;
+	font-family: 'Cafe24Ssurround';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.14px;
+	z-index: 1;
+  }
+  
+	
+  
+  .cloud{
+	position: absolute;
+	width: 100%;
+  }
+	
+
+.text{
+	display:flex;
+    align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.text span {
+	padding-left: 50px;
+	padding-right: 50px;
+    font-size: 25px;
+}
+
+.bookcover{
+	display: flex;
+    align-items: center;
+}
+
+.cover {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.cover span {
+	width: 500px;
+	text-align: center;
+    font-size: 40px;
+	line-height: 120%;
+}
+
+body{
+	font-family: 'KyoboHand';
+	position: relative;
+    height: 100vh; /* 화면 전체 높이로 설정 */
+}
+
+.flipbook-viewport{
+	position: absolute;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+.flipbook-viewport .container{
+	position:absolute;
+	top:50%;
+	left:46%;
+	margin:auto;
+	
+}
+
+.flipbook-viewport .flipbook{
+	width:922px;
+	height:600px;
+	left:-550px;
+	top:-300px;
+	position: relative;
+}
+
+.flipbook-viewport .page{
+	width:461px;
+	height:600px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.flipbook .page{
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+.flipbook-viewport .page img{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin:0;
+}
+
+.flipbook-viewport .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #ccc;
+	-moz-box-shadow:0 0 20px #ccc;
+	-o-box-shadow:0 0 20px #ccc;
+	-ms-box-shadow:0 0 20px #ccc;
+	box-shadow:0 0 20px #ccc;
+}

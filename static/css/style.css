@@ -1,0 +1,838 @@
+@font-face {
+  font-family: 'KCC-Hanbit';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.index{
+  display:flex;
+}
+
+.buttonss{
+  padding: 50px;
+  display:flex;
+}
+
+.button-{
+  padding:30px;
+  display:flex;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 36px;
+  opacity: 0;
+  animation: appear 1s 3s forwards;
+}
+
+.load{
+  margin:11em;
+  text-align: center;
+}
+
+.loader {
+  margin:auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: 16px solid #bdc3c7;
+  width: 120px;
+  height: 120px;
+  border-top-color: #1abc9c;
+  border-bottom-color: #3498db;
+  border-radius: 50%;
+  animation: coloredspin 4s linear infinite;
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coloredspin {
+  0%{
+    transform: rotate(0deg) scale(1);
+    border-top-color: #1abc9c;
+    border-bottom-color: #1abc9c;
+  }
+  25% {
+    border-top-color: #2ecc71;
+    border-bottom-color: #2ecc71;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.05);
+    border-top-color: #3498db;
+    border-bottom-color: #3498db;
+  }
+  75% {
+    border-top-color: #9b59b6;
+    border-bottom-color: #9b59b6;
+  }
+  100%{
+    transform: rotate(720deg) scale(1);
+    border-top-color: #1abc9c;
+    border-bottom-color: #1abc9c;
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+form{
+  text-align: center;
+}
+body {
+  font-family: 'Cafe24Ssurround';
+  background-color: #FBEFF8;
+  margin: 0;
+}
+textarea {
+  border: white;
+  resize: none;
+}
+textarea:focus {
+  outline: none;
+}
+input {
+  font-family: 'Cafe24Ssurround';
+  font-size: 20px;
+  text-align: center;
+}
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: 'Cafe24Ssurround';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.032px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  background-color: #fff;
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Cafe24Ssurround';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.14px;
+  z-index: 1;
+}
+.logo {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+	height: 70px;
+  padding-top: 20px;
+  
+}
+.cloud{
+  position: absolute;
+  width: 100%;
+}
+.header-content {
+  margin-top: 20px;
+}
+.header-highlight {
+  width: 108px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--sb2, #ebebfa);
+  float: left;
+  padding: 5px 0 0 12px;
+  box-sizing: border-box;
+}
+.header-next {
+  float: left;
+  margin: 9px 24px 0 12px;
+}
+.header-text {
+  float: left;
+  margin: 4px 12px 0 0;
+}
+/* index page */
+.index-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 98vh;
+  width: 100%;
+  padding-top: 12rem;
+  background-color: #FBEFF8;
+  position: fixed;
+}
+.writer {
+  width: 34rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 10px;
+  margin: 3rem 0 3rem 0;
+  padding-left: 10px;
+}
+.title {
+  color: #000;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.56px;
+}
+
+.subtitle {
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.submit-button.index {
+  display: flex;
+  width: 139px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+  cursor: pointer;
+}
+
+/* select page */
+.select-page {
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  background-color: #f7f7fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title.select {
+  color: #000;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 85.714% */
+  letter-spacing: -0.56px;
+  margin: 11.4rem 0 0 0;
+}
+.subtitle.select {
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px; /* 211.111% */
+  letter-spacing: 0.036px;
+}
+.select-container {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0 0 0;
+}
+
+.select-box {
+  border-radius: 20px;
+  border: 1px solid rgba(97, 51, 226, 0.15);
+  background: #fff;
+  width: 25.6rem;
+  height: 29.5rem;
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+}
+.select-icon {
+  margin: 72px 0 32px 131px;
+}
+.select-icon.with-tag {
+  margin-top: 14px;
+}
+.select-box-title {
+  color: #000;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.66px;
+}
+.select-box-content {
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.24px;
+  margin: 15px 0 43px 0;
+}
+.select-button.empty {
+  width: 9.6rem;
+  height: 2.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--m, #F3D0D7);
+  color: var(--m, var(--story, #F3D0D7));
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  background-color: #fff;
+  margin-left: 128px;
+  cursor: pointer;
+}
+.select-button.filled {
+  width: 9.6rem;
+  height: 2.9rem;
+  border-radius: 8px;
+  background: var(--story, #F3D0D7);
+  color: #fff;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  border: none;
+  margin-left: 129px;
+  cursor: pointer;
+}
+
+.tag {
+  width: 4.25rem;
+  height: 3.625rem;
+  border-radius: 0px 0px 10px 10px;
+  background: linear-gradient(112deg, #F8E0F7 -5.01%, #9533e2 96.64%);
+  color: #fff;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.0375rem;
+  box-sizing: border-box;
+  padding-top: 14px;
+  margin: 0 0 0 31px;
+}
+/* request-page */
+
+.request-page {
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  background-color: #FBEFF8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title.request {
+  color: #000;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px; /* 135.714% */
+  letter-spacing: 0.056px;
+  margin: 11.8rem 0 0 0;
+}
+.subtitle.request {
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px; /* 211.111% */
+  letter-spacing: 0.036px;
+}
+.input-field {
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  width: 50rem;
+  height: 20rem;
+  border: none;
+  border-radius: 10px;
+  padding: 30px 12px 9px 12px;
+  font-size: 20px;
+  margin: 2.4rem 0 0.6rem 0;
+}
+.input-field::placeholder {
+  font-family: 'Cafe24Ssurround';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.032px;
+}
+.request-ex {
+  color: rgba(0, 0, 0, 0.35);
+  font-family: 'Cafe24Ssurround';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.028px;
+  margin: 0 0 2rem calc(50vw - 412px);
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+.request-button {
+  width: 8.8rem;
+  height: 2.9rem;
+  flex-shrink: 0;
+  background-color: var(--story, #F2BED1);
+  border: 1px solid #F2BED1;
+  border-radius: 7px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+/* outline page */
+.outline-page {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* position: fixed; */
+  background-color: #f7f7fc;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.outline-container {
+  display: flex;
+  flex-direction: row;
+}
+.title.outline {
+  color: #000;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px; /* 135.714% */
+  letter-spacing: 0.056px;
+  margin-top: 8.8rem;
+}
+.subtitle.outline {
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px; /* 211.111% */
+  letter-spacing: 0.036px;
+}
+.element-box {
+  width: 25.9rem;
+  height: 29.4rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  margin: 2.9rem 0.7rem 1.6rem calc(20vw - 117px);
+  padding-top: 1.6rem;
+}
+.element-container {
+  display: flex;
+  flex-direction: row;
+}
+.element {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 'Cafe24Ssurround';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03px;
+  margin: 19px 0 0 1rem;
+  width: 16.7rem;
+  flex-shrink: 0;
+}
+
+.label.medium {
+  color: #000;
+  font-family: 'Cafe24Ssurround';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 166.667% */
+  letter-spacing: 0.03px;
+  margin-right: 7px;
+  float: left;
+}
+.label.small {
+  float: left;
+  color: #000;
+  font-family: 'Cafe24Ssurround';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 166.667% */
+  letter-spacing: 0.03px;
+  margin: 19px 0 0 39px;
+  width: 46px;
+}
+.outline-box {
+  width: 61.9rem;
+  height: 29.4rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+  margin: 2.9rem 10vw 0 0;
+  padding: 2.7rem 3.1rem 2.7rem 3.1rem;
+  box-sizing: border-box;
+  /* margin: 0 0 1rem 0;
+  padding: 1rem;
+  background-color: white;
+  width: 47vw;
+  min-height: 17rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; */
+}
+.new-tag {
+  color: var(--m, var(--story, #6133e2));
+  text-align: left;
+  font-family: 'Cafe24Ssurround';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.028px;
+  margin-top: 0.1rem;
+}
+.content {
+  width: 55.6rem;
+  height: 20.8rem;
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 'Cafe24Ssurround';
+  transform: rotate(0.04deg);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px; /* 206.25% */
+  letter-spacing: -0.48px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+.content::-webkit-scrollbar {
+  width: 10px;
+}
+.content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #b8b2d0;
+}
+.content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.button-container {
+  display: flex;
+
+  flex-direction: row;
+  margin: 0 0 0 calc(20vw - 117px);
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  margin: 0 29.3rem 0 25.4rem;
+}
+.page-label {
+  color: #000;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.032px;
+  width: 75px;
+  margin: 11px 30px 0 30px;
+}
+.multiline-input {
+  width: 46vw;
+  height: 8rem;
+}
+.request-box {
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+  background-color: white;
+  width: 47vw;
+  height: 10rem;
+  border-radius: 10px;
+}
+
+.modify-button {
+  width: 8.4rem;
+  height: 2.9rem;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid var(--m, #F3D0D7);
+  background: #fff;
+  color: var(--m, var(--story, #F3D0D7));
+  font-family: 'Cafe24Ssurround';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+.modify-button-icon {
+  margin-right: 6px;
+}
+
+.submit-button {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  background-color: #F2BED1;
+  border: #F3D0D7;
+  border-radius: 7px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  cursor: pointer;
+}
+.submit-button.outline {
+  width: 14rem;
+  height: 3rem;
+}
+
+.next-button-icon {
+  margin-left: 9px;
+  cursor: pointer;
+}
+
+.edit-container {
+  width: 50vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+/* plot page */
+.plot-page {
+  /* position: fixed; */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f7f7fc;
+  display: flex;
+  flex-direction: column;
+}
+.title.plot {
+  color: #000;
+  font-family: 'Cafe24Ssurround';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px; /* 135.714% */
+  letter-spacing: 0.056px;
+  margin-top: 7rem;
+}
+.subtitle.plot {
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px; /* 211.111% */
+  letter-spacing: 0.036px;
+  margin-bottom: 1.75rem;
+}
+.plot-view {
+  width: 100vw;
+  height: 492px;
+  display: flex;
+  background: rgba(190, 190, 224, 0.1);
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 21px;
+  cursor: default;
+}
+.plot-view::-webkit-scrollbar {
+  width: 147px;
+  height: 9px;
+}
+.plot-view::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #b8b2d0;
+}
+.plot-view::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.plot-box {
+  background: white;
+  width: 358px;
+  height: 425px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin: 1rem;
+  flex-shrink: 0;
+}
+.plot-title {
+  color: #000;
+  font-family: 'Cafe24Ssurround';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.03px;
+  margin: 22px 0 0 35px;
+}
+.plot-content {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 'Cafe24Ssurround';
+  transform: rotate(0.04deg);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0.032px;
+  margin: 12px 27px 10px 35px;
+  padding-right: 8px;
+  max-height: 20.5rem;
+  overflow-x: auto;
+}
+.plot-content::-webkit-scrollbar {
+  width: 7px;
+  height: 6px;
+}
+.plot-content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.plot-content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.pagination.plot {
+  margin: 0 calc(35vw - 220px) 0 calc(35vw - 220px);
+}
+.submit-button.plot {
+  width: 165px;
+  height: 46px;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: center;
+  font-family: 'Cafe24Ssurround';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  cursor: pointer;
+}
+/* full story page */
+.story-page {
+  display: flex;
+  height: 98vh;
+  overflow-y: hidden;
+  background-color: #f7f7fc;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-story {
+  margin: 3rem 0 3rem 0;
+  padding: 1rem;
+  background-color: white;
+  width: 90vw;
+  min-height: 30rem;
+  white-space: pre-line;
+  overflow-y: scroll;
+}
+
+.modal {
+  background-color: white;
+  border: 1px gray solid;
+  position: fixed;
+  width: 20rem;
+  height: 10rem;
+  margin: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.credit {
+  position: absolute;
+  top: 0%;
+  right: 2%;
+}

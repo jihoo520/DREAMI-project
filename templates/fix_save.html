@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://127.0.0.1:5000/story -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream i</title>
+    <style>
+        @font-face {
+            font-family: 'KCC-Hanbit';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cafe24Ssurround';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            font-size: 50px;
+          }
+          
+          h2 {
+            font-size: 36px;
+            opacity: 0;
+            animation: appear 1s 3s forwards;
+          }
+          
+          .load{
+            margin:11em;
+            text-align: center;
+          }
+          
+          .loader {
+            margin:auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            border: 16px solid #bdc3c7;
+            width: 120px;
+            height: 120px;
+            border-top-color: #1abc9c;
+            border-bottom-color: #3498db;
+            border-radius: 50%;
+            animation: coloredspin 4s linear infinite;
+          }
+          
+          @keyframes spin {
+            0%{
+              transform: rotate(0deg);
+            }
+            100%{
+              transform: rotate(360deg);
+            }
+          }
+          
+          @keyframes coloredspin {
+            0%{
+              transform: rotate(0deg) scale(1);
+              border-top-color: #1abc9c;
+              border-bottom-color: #1abc9c;
+            }
+            25% {
+              border-top-color: #2ecc71;
+              border-bottom-color: #2ecc71;
+            }
+            50% {
+              transform: rotate(360deg) scale(1.05);
+              border-top-color: #3498db;
+              border-bottom-color: #3498db;
+            }
+            75% {
+              border-top-color: #9b59b6;
+              border-bottom-color: #9b59b6;
+            }
+            100%{
+              transform: rotate(720deg) scale(1);
+              border-top-color: #1abc9c;
+              border-bottom-color: #1abc9c;
+            }
+          }
+          
+          @keyframes appear {
+            0%{
+              opacity: 0;
+            }
+            100%{
+              opacity: 1;
+            }
+          }
+          
+
+        form {
+            padding-bottom: 30px;
+            display: flex;
+            margin-top: 0em;
+            unicode-bidi: isolate;
+        }
+
+        body {
+            font-family: 'KCC-Hanbit', Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .story-form{
+            display:flex;
+            
+        }
+
+        .container {
+            width: 97%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container {
+            white-space: nowrap; /* 자식 요소들이 한 줄로 나열되도록 함 */
+            background-color: #FBEFF8;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start; /* 이미지 아이템을 위쪽 정렬 */
+            gap: 20px; /* 이미지 사이 간격 */
+            max-width: 100%; /* 최대 너비 지정 */
+            overflow-y: hidden; /* 세로 스크롤 숨기기 */
+        }
+
+        .image-item {
+            text-align: center;
+            padding: 25px; /* 내부 여백 */
+            display: flex;
+            flex-direction: column; /* 이미지와 입력 필드를 위아래로 배치 */
+            align-items: center; /* 가운데 정렬 */
+        }
+
+        .image-item img {
+            width: 400px;
+            height: 400px;
+            border-radius: 8px;
+            object-fit: cover; /* 이미지가 찌그러지지 않고 잘 맞도록 조절 */
+            margin-bottom: 10px;
+        }
+
+        .input-field {
+            font-family: 'KCC-Hanbit';
+            width: 100%; /* 입력 필드 너비 조정 */
+            height: 160px; /* 입력 필드 높이 조정 */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: none; /* 사용자가 크기를 조정하지 못하도록 함 */
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 10px; /* 이미지와의 간격 조절 */
+            font-size: 18px;
+        }
+
+        .submit-button-container {
+            position: absolute;
+            top: 90%;
+            left: 47%;
+        }
+        
+        .submit-button {
+            width: 100px;
+            height: 40px;
+            background-color: var(--story, #F2BED1);
+            border: 1px solid #F2BED1;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            font-family: 'Cafe24Ssurround', Arial, sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        .image-container::-webkit-scrollbar {
+            width: 10px;
+          }
+          .image-container::-webkit-scrollbar-thumb {
+            background-color: #2f3542;
+            border-radius: 10px;
+            background-clip: padding-box;
+            border: 2px solid transparent;
+          }
+          .image-container::-webkit-scrollbar-track {
+            background-color: grey;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 5px white;
+          }
+    </style>
+</head>
+<body>
+    <div class="load" id="loading" style="display: none;">
+        <h1>AI가 동화책을 만들고 있어요🙂</h1>
+      <div class="loader"></div>
+      <h2>잠시 기다려주세요😊</h2>
+    </div>
+
+    <div class="container" id = 'pages'>
+        <div class="header">
+            <div class="logo">
+                <img src="../static/images/header/logo3.png" alt="Logo">
+            </div>
+        </div>
+        <div class="container">
+            <div class="image-container">
+                <form id="story-form" action="/result" method="post">
+                    {% for i in data %}
+                    <div class="image-item">
+                        <img src="./images/{{ loop.index0 }}.jpg" alt="Image {{ loop.index0 }}">
+                        <textarea class="input-field" id="input{{ loop.index0 }}" name="{{ loop.index0 }}">{{ i }}</textarea>
+                    </div>
+                    {% endfor %}
+                    <div class="submit-button-container">
+                        <button type="submit" class="submit-button">수정 완료</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('story-form').addEventListener('submit', function() {
+            document.getElementById('pages').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

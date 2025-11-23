@@ -1,0 +1,84 @@
+<!doctype html>
+<!--[if lt IE 7]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="ko"> <!--<![endif]-->
+<head>
+    <title>Dream i</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1050, user-scalable=no" />
+    <link rel="stylesheet" href="./static/css/basic.css">
+    <script src="./static/js/modernizr.2.5.3.min.js"></script>
+    <script src="./static/js/jquery.min.1.7.js"></script>
+    <script>
+        function playAudio(index) {
+            var audio = document.getElementById("audio" + index);
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="./static/images/header/logo3.png" width="150px" height="50px"></div>
+        <div class="header-content"></div>
+    </div>
+
+    <div class="flipbook-viewport">
+        <div class="container">
+            <div class="flipbook">
+                <div class="hard" style="background:#FAFAFA"></div>
+                <div class="hard" style="background-image:url(./static/images/5.jpg)"></div>
+                <div class="bookcover">
+                    <div class="cover"><span>{{title}}</span></div>
+                </div>
+
+                {% for i in data %}
+                <div style="background-image:url(./static/images/{{loop.index0}}.jpg)"></div>
+                <div class="text">
+                    <span>{{i}}</span><br>
+                    <audio id="audio{{loop.index0}}">
+                        <source src="./static/audio/{{loop.index0}}.mp3" type="audio/mpeg">
+                    </audio>
+                    <button onclick="playAudio({{loop.index0}})"></button>
+                </div>
+                {% endfor %}
+
+                <div class="bookcover">
+                    <div class="cover">
+                        <span>THE END</span>
+                    </div>
+                </div>
+                <div class="hard" style="background:#FAFAFA"></div>
+                <div class="hard" style="background:#FAFAFA"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function loadApp() {
+            $('.flipbook').turn({
+                // Width
+                width: 1200,
+                // Height
+                height: 600,
+                // Elevation
+                elevation: 10,
+                // Enable gradients
+                gradients: true,
+                // Auto center this flipbook
+                autoCenter: true
+            });
+        }
+
+        // Load the HTML4 version if there's not CSS transform
+        yepnope({
+            test: Modernizr.csstransforms,
+            yep: ['./static/js/turn.js'],
+            nope: ['./static/js/turn.html4.min.js'],
+            both: ['./static/css/basic.css'],
+            complete: loadApp
+        });
+    </script>
+</body>
+</html>

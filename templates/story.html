@@ -1,0 +1,41 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/name.css') }}">
+    <title>Dream i</title>
+    <style>
+        
+     </style>
+</head>
+<body>
+    <div class="load" id="loading" style="display: none;">
+        <h1>AI가 동화 내용을 생성 중입니다🙂</h1>
+        <div class="loader"></div>
+        <h2>잠시 기다려주세요😊</h2>
+    </div>
+
+
+    <div class="container" id = 'pages'>
+        <div class="header">
+            <div class=cloud><img src="./static/images/header/cloud.png"></div>
+            <div class=logo><img src="./static/images/header/logo3.png" width="250px" height="80px"></div>
+            <div class="header-content"></div>
+        </div>
+        <div id="page" class="request-page">
+            <div class="title request"> 재밌는 동화 내용을 준비해봤어요🙂<br>원하는 동화의 내용을 자유롭게 작성해주세요!<br>{{name}}에게 딱 맞는 동화책을 만들어드릴게요😀</div>
+            <div class="form">
+                <form id="story-form" action="/story" method="post">
+                    <textarea id="input-field" class="input-field" type="text" id="input" name="story">{{summary}}</textarea><br>
+                    <button id="submit-button" class="request-button" type="submit">동화 생성</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('story-form').addEventListener('submit', function() {
+            document.getElementById('pages').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
